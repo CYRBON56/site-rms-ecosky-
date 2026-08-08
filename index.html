@@ -54,7 +54,7 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="realisations.html">Réalisations</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a class="btn" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener">Devis gratuit</a></li>
+      <li><a class="btn" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener" onclick="notifyDevisClick()">Devis gratuit</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
@@ -69,7 +69,7 @@
       <h1 style="margin-top:18px;">Le sol qui tient tête<br> aux hivers bretons.</h1>
       <p class="lead" style="margin-top:22px;">Résine EPDM coulée en place, drainante et sans joint, pour vos terrasses, plages de piscine et allées. Posée par les mêmes mains qui gèrent votre assainissement et vos clôtures — un seul artisan, du terrassement à la finition.</p>
       <div style="margin-top:34px; display:flex; gap:16px; flex-wrap:wrap;">
-        <a class="btn" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener">Demander mon devis gratuit</a>
+        <a class="btn" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener" onclick="notifyDevisClick()">Demander mon devis gratuit</a>
         <a class="btn outline" href="realisations.html">Voir les réalisations</a>
       </div>
       <div style="margin-top:44px; display:flex; gap:36px; flex-wrap:wrap;">
@@ -145,7 +145,7 @@
         <h2 style="color:var(--blanc); max-width:16ch;">Un projet en tête ?</h2>
         <p style="color:var(--ivoire-2); margin-top:10px; max-width:42ch;">Décrivez votre terrain, nous revenons vers vous avec une estimation sous 48h.</p>
       </div>
-      <a class="btn" style="background:var(--sable); border-color:var(--sable); color:var(--nuit);" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener">Demander mon devis</a>
+      <a class="btn" style="background:var(--sable); border-color:var(--sable); color:var(--nuit);" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener" onclick="notifyDevisClick()">Demander mon devis</a>
     </div>
   </section>
 
@@ -169,7 +169,7 @@
       <h4>Contact</h4>
       <p style="display:flex; flex-direction:column; gap:10px;">
         <a href="mailto:infos@ecosky.fr">infos@ecosky.fr</a>
-        <a href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener">Devis en ligne</a>
+        <a href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener" onclick="notifyDevisClick()">Devis en ligne</a>
       </p>
     </div>
   </div>
@@ -180,6 +180,21 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+  function notifyDevisClick() {
+    try {
+      fetch('https://salesflow-ecosky.vercel.app/api/sms-devis-click', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ page: window.location.href })
+      }).catch(function (err) {
+        console.error('sms-devis-click error:', err);
+      });
+    } catch (err) {
+      console.error('notifyDevisClick error:', err);
+    }
+  }
+</script>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
