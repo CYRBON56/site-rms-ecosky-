@@ -153,13 +153,19 @@ footer.site .legal{
 
 @media (max-width: 860px){
   .navlinks{
-    position:fixed; inset: 78px 0 0 0; background: var(--ivoire);
+    position:fixed;
+    top: 78px; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    z-index: 100;
+    background: var(--ivoire);
     flex-direction:column; padding: 40px 28px; gap:26px; font-size:1.2rem;
     transform: translateX(100%); transition: transform 0.3s ease;
+    overflow-y: auto;
   }
   .navlinks.open{ transform: translateX(0); }
   .burger{
     display:flex; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px;
+    z-index: 101;
   }
   .burger span{ width:24px; height:2px; background: var(--nuit); }
   .btn.nav-cta{ display:none; }
