@@ -6,6 +6,9 @@
 <title>Réalisations — RMS EcoSky</title>
 <meta name="description" content="Terrasses, plages de piscine et allées en résine EPDM réalisées par RMS EcoSky en Bretagne.">
 <link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#14181A">
+<link rel="apple-touch-icon" href="images/icon-192.png">
 </head>
 <body>
 
@@ -103,5 +106,12 @@
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    });
+  }
+</script>
 </body>
 </html>
