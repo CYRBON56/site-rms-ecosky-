@@ -15,9 +15,6 @@
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="styles.css">
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#14181A">
-<link rel="apple-touch-icon" href="images/icon-192.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,7 +51,7 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="realisations.html">Réalisations</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a class="btn" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener" onclick="notifyDevisClick()">Devis gratuit</a></li>
+      <li><a class="btn" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener">Devis gratuit</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
@@ -69,7 +66,7 @@
       <h1 style="margin-top:18px;">Le sol qui tient tête<br> aux hivers bretons.</h1>
       <p class="lead" style="margin-top:22px;">Résine EPDM coulée en place, drainante et sans joint, pour vos terrasses, plages de piscine et allées. Posée par les mêmes mains qui gèrent votre assainissement et vos clôtures — un seul artisan, du terrassement à la finition.</p>
       <div style="margin-top:34px; display:flex; gap:16px; flex-wrap:wrap;">
-        <a class="btn" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener" onclick="notifyDevisClick()">Demander mon devis gratuit</a>
+        <a class="btn" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener">Demander mon devis gratuit</a>
         <a class="btn outline" href="realisations.html">Voir les réalisations</a>
       </div>
       <div style="margin-top:44px; display:flex; gap:36px; flex-wrap:wrap;">
@@ -81,7 +78,7 @@
     <div class="resin-swatch" style="aspect-ratio: 4/5; display:flex; align-items:flex-end; padding:26px;">
       <img src="images/hero-piscine.jpg" alt="Plage de piscine en résine EPDM posée par RMS EcoSky">
       <div style="position:relative; z-index:1; background:var(--nuit); color:var(--ivoire); padding:14px 18px; border-radius:12px; font-family:var(--mono); font-size:0.78rem; line-height:1.6;">
-        EPDM 8mm<br>Granulats naturels<br>Pose sur dalle
+        EPDM 2–4mm<br>Caoutchouc recyclé<br>Pose sur dalle
       </div>
     </div>
   </section>
@@ -99,7 +96,10 @@
         <div class="resin-card" style="padding:30px; display:flex; flex-direction:column;">
           <h3>Assainissement (ANC/SPANC)</h3>
           <p style="margin-top:12px; color:var(--ardoise-2); font-size:0.96rem; flex-grow:1;">Étude de sol, filière compacte ou traditionnelle, mise aux normes, dossier SPANC géré pour vous.</p>
-          <a href="https://salesflow-ecosky.vercel.app/estimation-anc.html" target="_blank" rel="noopener" class="btn outline" style="margin-top:20px; align-self:flex-start; padding:10px 20px; font-size:0.85rem;">Devis assainissement</a>
+          <div style="margin-top:20px; display:flex; gap:14px; flex-wrap:wrap;">
+            <a href="assainissement.html" class="btn outline" style="padding:10px 20px; font-size:0.85rem;">Les systèmes ANC</a>
+            <a href="https://salesflow-ecosky.vercel.app/estimation-anc.html" target="_blank" rel="noopener" class="btn outline" style="padding:10px 20px; font-size:0.85rem;">Devis assainissement</a>
+          </div>
         </div>
         <div class="resin-card" style="padding:30px;">
           <h3>Portails, clôtures & enrobés</h3>
@@ -145,7 +145,7 @@
         <h2 style="color:var(--blanc); max-width:16ch;">Un projet en tête ?</h2>
         <p style="color:var(--ivoire-2); margin-top:10px; max-width:42ch;">Décrivez votre terrain, nous revenons vers vous avec une estimation sous 48h.</p>
       </div>
-      <a class="btn" style="background:var(--sable); border-color:var(--sable); color:var(--nuit);" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener" onclick="notifyDevisClick()">Demander mon devis</a>
+      <a class="btn" style="background:var(--sable); border-color:var(--sable); color:var(--nuit);" href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener">Demander mon devis</a>
     </div>
   </section>
 
@@ -169,7 +169,7 @@
       <h4>Contact</h4>
       <p style="display:flex; flex-direction:column; gap:10px;">
         <a href="mailto:infos@ecosky.fr">infos@ecosky.fr</a>
-        <a href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener" onclick="notifyDevisClick()">Devis en ligne</a>
+        <a href="https://salesflow-ecosky.vercel.app/estimation.html" target="_blank" rel="noopener">Devis en ligne</a>
       </p>
     </div>
   </div>
@@ -181,30 +181,8 @@
 
 <script src="script.js"></script>
 <script>
-  function notifyDevisClick() {
-    try {
-      fetch('https://salesflow-ecosky.vercel.app/api/sms-devis-click', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ page: window.location.href })
-      }).catch(function (err) {
-        console.error('sms-devis-click error:', err);
-      });
-    } catch (err) {
-      console.error('notifyDevisClick error:', err);
-    }
-  }
-</script>
-<script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js').catch(() => {});
-    });
-  }
-</script>
 </body>
 </html>
