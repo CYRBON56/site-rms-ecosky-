@@ -1,0 +1,19 @@
+# RMS EcoSky
+
+> RMS EcoSky (EcoSky by RMS, raison sociale Résine Marbre Sol) est un artisan basé à Brech, dans le Morbihan (Bretagne). Spécialité : les sols souples en résine EPDM coulée en place (gamme EcoSky'Gum) pour terrasses, plages de piscine et allées, et les allées carrossables en granulat lié à la résine. L'entreprise fait aussi l'assainissement non collectif (ANC, dossier SPANC compris), les portails, clôtures et enrobés : un seul artisan du terrassement à la finition.
+
+- Zone : principalement 40 km autour de Brech (Vannes, Auray, Lorient, Pontivy) ; reste de la Bretagne sur étude.
+- Résine EPDM piéton (terrasse, tour de piscine) : à partir de 115 € HT/m² sur dalle béton en bon état.
+- Allée ou parking carrossable (granulat lié quartz, granit ou marbre) : 180 € HT/m² sur terre nue terrassement compris, à partir de 150 € HT/m² sur terrain préparé ; bordure 45 € HT/ml.
+- Surface minimum 10 m². TVA 10 % si le logement a plus de 2 ans.
+- Estimation en ligne immédiate : https://salesflow-ecosky.vercel.app/estimation.html
+- Contact : infos@ecosky.fr · 23 route de Corn er Hoet, 56400 Brech · SIRET 939 997 870 00018 · assurance décennale ERGO.
+
+## Pages
+
+- [Accueil](https://www.ecosky.fr/index.html)
+- [Services : résine EPDM, assainissement, portails, clôtures, enrobés](https://www.ecosky.fr/services.html)
+- [Prix et questions fréquentes](https://www.ecosky.fr/faq.html)
+- [Assainissement non collectif : les systèmes ANC](https://www.ecosky.fr/assainissement.html)
+- [Réalisations](https://www.ecosky.fr/realisations.html)
+- [Contact](https://www.ecosky.fr/contact.html)
