@@ -1,9 +1,53 @@
-{ "cleanUrls": false, "trailingSlash": false,
-  "redirects": [
-    { "source": "/estimation-1", "destination": "https://salesflow-ecosky.vercel.app/estimation.html", "permanent": true },
-    { "source": "/estimation", "destination": "https://salesflow-ecosky.vercel.app/estimation.html", "permanent": true },
-    { "source": "/contact-1", "destination": "/contact.html", "permanent": true },
-    { "source": "/assainissement", "destination": "/assainissement.html", "permanent": true },
-    { "source": "/portails", "destination": "/portails.html", "permanent": true }
-  ],
-  "headers": [{ "source": "/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }] }] }
+{
+ "cleanUrls": false,
+ "trailingSlash": false,
+ "redirects": [
+  {
+   "source": "/estimation-1",
+   "destination": "https://salesflow-ecosky.vercel.app/estimation.html",
+   "permanent": true
+  },
+  {
+   "source": "/estimation",
+   "destination": "https://salesflow-ecosky.vercel.app/estimation.html",
+   "permanent": true
+  },
+  {
+   "source": "/contact-1",
+   "destination": "/contact.html",
+   "permanent": true
+  },
+  {
+   "source": "/assainissement",
+   "destination": "/assainissement.html",
+   "permanent": true
+  },
+  {
+   "source": "/portails",
+   "destination": "/portails.html",
+   "permanent": true
+  },
+  {
+   "source": "/devis-portails.html",
+   "destination": "/devis-portail.html",
+   "permanent": true
+  }
+ ],
+ "headers": [
+  {
+   "source": "/img/(.*)",
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=2592000"
+    }
+   ]
+  }
+ ],
+ "rewrites": [
+  {
+   "source": "/api/:path*",
+   "destination": "https://www.skyeco.fr/api/:path*"
+  }
+ ]
+}
