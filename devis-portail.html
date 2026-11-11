@@ -189,12 +189,24 @@
 </head>
 <body>
 
-<header class="site">
-  <div class="wrap">
-    <a href="/" class="brand" aria-label="EcoSky by RMS - accueil"><span class="logo-text">EcoSky by RMS</span><img src="/img/logo.png" alt="Logo EcoSky by RMS" class="logo-img" width="151" height="120"></a>
-    <a href="tel:0645688394" class="header-phone">📞 06 45 68 83 94</a>
-  </div>
-</header>
+<style>
+  .rms-barre{position:sticky;top:0;z-index:100;background:#163d28;color:#fff;font-family:Inter,'Public Sans',Arial,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+  .rms-barre .in{max-width:1280px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:16px}
+  .rms-retour{display:inline-flex;align-items:center;gap:10px;background:#8cc043;color:#163d28!important;font-weight:800;text-decoration:none;padding:12px 20px;border-radius:999px;font-size:1rem;white-space:nowrap}
+  .rms-retour:hover{background:#fff}
+  .rms-logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800}
+  .rms-logo img{height:46px;width:auto;background:#fff;border-radius:10px;padding:3px 6px}
+  .rms-nav{display:flex;gap:14px;margin-left:auto;white-space:nowrap}
+  .rms-nav a{color:#dfe9dc;text-decoration:none;font-weight:600;font-size:.86rem}
+  .rms-nav a:hover{color:#8cc043}
+  .rms-tel{color:#fff!important;font-weight:800!important}
+  @media(max-width:1180px){.rms-nav a.opt{display:none}}@media(max-width:860px){.rms-nav{display:none}.rms-logo{display:none}}
+</style>
+<div class="rms-barre"><div class="in">
+  <a class="rms-retour" href="/">← Retour au site EcoSky by RMS</a>
+  <a class="rms-logo" href="/" aria-label="Accueil EcoSky by RMS"><img src="/img/logo.png" alt="EcoSky by RMS"></a>
+  <nav class="rms-nav"><a href="/">Accueil</a><a class="opt" href="/resine-de-gomme.html">Résine de gomme</a><a href="/portails.html">Portails</a><a class="opt" href="/eau-de-pluie.html">Eau de pluie</a><a class="opt" href="/assainissement.html">Assainissement</a><a href="/contact.html">Contact</a><a href="/mentions-legales.html">Mentions légales</a><a class="rms-tel" href="tel:+33645688394">06 45 68 83 94</a></nav>
+</div></div>
 
 <main>
 
@@ -491,6 +503,7 @@
 
 </main>
 
+<div style="text-align:center;padding:30px 20px 50px"><a class="rms-retour" href="/" style="font-size:1.1rem;padding:16px 28px">← Retour à l'accueil EcoSky by RMS</a></div>
 <footer class="site">
   <div class="wrap">
     <div style="font-family:var(--display); font-size:1.3rem; color:var(--blanc);">RMS EcoSky</div>
